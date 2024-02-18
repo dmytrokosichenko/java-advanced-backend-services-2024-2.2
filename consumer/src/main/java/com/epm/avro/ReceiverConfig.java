@@ -16,7 +16,7 @@ import org.springframework.kafka.core.DefaultKafkaConsumerFactory;
 @EnableKafka
 public class ReceiverConfig {
 
-    private final static String BOOTSTRAP_SERVERS = "localhost:9093";
+    private final static String BOOTSTRAP_SERVERS = "localhost:29092";
 
     @Bean
     public Map<String, Object> consumerConfigs() {

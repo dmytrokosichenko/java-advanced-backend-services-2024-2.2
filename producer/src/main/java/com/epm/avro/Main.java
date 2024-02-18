@@ -13,14 +13,14 @@ public class Main {
     public static void main(String[] args) {
 
         Properties props = new Properties();
-        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9093");
+        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:29092");
         props.put("schema.registry.url", "http://localhost:8081");
 
         KafkaProducer producer = new KafkaProducer(props,
                 new IntegerSerializer(),
                 new MyAvroSerializer());
 
-        for (int i = 1; i <= 100000; i++){
+        for (int i = 1; i <= 1000; i++){
 
             producer.send(new ProducerRecord<>("test-users", 0, i,
                     User.newBuilder()
