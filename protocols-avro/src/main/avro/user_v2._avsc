@@ -1,0 +1,29 @@
+{
+  "namespace": "com.epm.avro",
+  "type": "record",
+  "name": "User",
+  "logicalType": "User",
+  "aliases": [
+    "User"
+  ],
+  "fields": [
+    {
+      "name": "id",
+      "type": [
+        "int",
+        "null"
+      ],
+      "default": 0
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "default": "undefined"
+    },
+    {
+      "name": "country",
+      "type": "string",
+      "default": "---"
+    }
+  ]
+}
